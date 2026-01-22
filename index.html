@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Applications Suite - Java Swing Projects | RSK World</title>
+    <meta name="description" content="Complete suite of counter applications from basic to ultimate. Features Simple Counter, Advanced Counter, and Ultimate Counter with AI, blockchain, voice control, and more.">
+    <meta name="keywords" content="Java, Swing, GUI, Counter, AI, Blockchain, Voice Control, Machine Learning, RSK World, Programming Tutorial">
+    <meta name="author" content="RSK World">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #3b82f6;
+            --secondary-color: #10b981;
+            --danger-color: #ef4444;
+            --warning-color: #f59e0b;
+            --info-color: #8b5cf6;
+            --dark-color: #1f2937;
+            --light-bg: #f8fafc;
+            --border-color: #e5e7eb;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: var(--dark-color);
+        }
+        
+        .hero-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin: 2rem auto;
+            max-width: 1400px;
+            overflow: hidden;
+        }
+        
+        .header-banner {
+            background: linear-gradient(135deg, var(--primary-color), var(--info-color));
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .header-banner h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .app-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+        }
+        
+        .app-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .app-icon.simple { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+        .app-icon.advanced { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+        .app-icon.ultimate { background: linear-gradient(135deg, #10b981, #059669); }
+        
+        .difficulty-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        
+        .difficulty-beginner { background: rgba(16, 185, 129, 0.1); color: var(--secondary-color); }
+        .difficulty-intermediate { background: rgba(139, 92, 246, 0.1); color: var(--info-color); }
+        .difficulty-advanced { background: rgba(245, 158, 11, 0.1); color: var(--warning-color); }
+        
+        .btn-custom {
+            padding: 0.75rem 2rem;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin: 0.5rem;
+        }
+        
+        .btn-primary-custom { background: var(--primary-color); color: white; }
+        .btn-success-custom { background: var(--secondary-color); color: white; }
+        
+        .footer {
+            background: rgba(31, 41, 55, 0.95);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            border-radius: 20px 20px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-section">
+        <div class="header-banner">
+            <h1><i class="fas fa-calculator"></i> Counter Applications Suite</h1>
+            <p class="lead">Complete Collection from Basic to Ultimate with Cutting-Edge Features</p>
+            <div class="mt-3">
+                <span class="difficulty-badge difficulty-beginner">Beginner</span>
+                <span class="difficulty-badge difficulty-intermediate">Intermediate</span>
+                <span class="difficulty-badge difficulty-advanced">Advanced</span>
+            </div>
+        </div>
+        
+        <div class="container-fluid p-4">
+            <div class="row">
+                <!-- Simple Counter -->
+                <div class="col-lg-4">
+                    <div class="app-card">
+                        <div class="app-icon simple">
+                            <i class="fas fa-plus-minus text-white"></i>
+                        </div>
+                        <h3>Simple Counter</h3>
+                        <span class="difficulty-badge difficulty-beginner">Beginner Friendly</span>
+                        <p>Perfect starting point for learning Java Swing with essential counter functionality.</p>
+                        
+                        <h6>Key Features:</h6>
+                        <ul>
+                            <li>✓ Increment/Decrement buttons</li>
+                            <li>✓ Reset functionality</li>
+                            <li>✓ Color-coded display</li>
+                            <li>✓ Hover effects</li>
+                        </ul>
+                        
+                        <div class="text-center">
+                            <a href="./SimpleCounter.java" class="btn-custom btn-primary-custom">
+                                <i class="fas fa-code"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Advanced Counter -->
+                <div class="col-lg-4">
+                    <div class="app-card">
+                        <div class="app-icon advanced">
+                            <i class="fas fa-cogs text-white"></i>
+                        </div>
+                        <h3>Advanced Counter</h3>
+                        <span class="difficulty-badge difficulty-intermediate">Intermediate Level</span>
+                        <p>Feature-rich counter with themes, history tracking, keyboard shortcuts, and data persistence.</p>
+                        
+                        <h6>Key Features:</h6>
+                        <ul>
+                            <li>✓ 5 Beautiful themes</li>
+                            <li>✓ Complete history tracking</li>
+                            <li>✓ Keyboard shortcuts</li>
+                            <li>✓ Sound effects</li>
+                            <li>✓ Data persistence</li>
+                        </ul>
+                        
+                        <div class="text-center">
+                            <a href="./AdvancedCounter.java" class="btn-custom btn-primary-custom">
+                                <i class="fas fa-code"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ultimate Counter -->
+                <div class="col-lg-4">
+                    <div class="app-card">
+                        <div class="app-icon ultimate">
+                            <i class="fas fa-rocket text-white"></i>
+                        </div>
+                        <h3>Ultimate Counter</h3>
+                        <span class="difficulty-badge difficulty-advanced">Enterprise Grade</span>
+                        <p>Premium counter with AI features, multi-counter support, analytics, and blockchain integration.</p>
+                        
+                        <h6>Key Features:</h6>
+                        <ul>
+                            <li>✓ 7 Premium themes</li>
+                            <li>✓ Multi-counter support</li>
+                            <li>✓ Advanced analytics</li>
+                            <li>✓ Built-in timer</li>
+                            <li>✓ System tray integration</li>
+                            <li>✓ AI predictions</li>
+                        </ul>
+                        
+                        <div class="text-center">
+                            <a href="./UltimateCounter.java" class="btn-custom btn-primary-custom">
+                                <i class="fas fa-code"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Documentation Links -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h2 class="text-center mb-4">📚 Documentation</h2>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="app-card text-center">
+                                <i class="fas fa-book fa-2x mb-3 text-primary"></i>
+                                <h5>Basic README</h5>
+                                <a href="./README.md" class="btn-custom btn-success-custom">View</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="app-card text-center">
+                                <i class="fas fa-book-open fa-2x mb-3 text-info"></i>
+                                <h5>Advanced Guide</h5>
+                                <a href="./README_ADVANCED.md" class="btn-custom btn-success-custom">View</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="app-card text-center">
+                                <i class="fas fa-project-diagram fa-2x mb-3 text-success"></i>
+                                <h5>Project Overview</h5>
+                                <a href="./PROJECT_OVERVIEW.md" class="btn-custom btn-success-custom">View</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="app-card text-center">
+                                <i class="fas fa-road fa-2x mb-3 text-warning"></i>
+                                <h5>Feature Roadmap</h5>
+                                <a href="./FEATURE_ROADMAP.md" class="btn-custom btn-success-custom">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5><i class="fas fa-globe"></i> RSK World</h5>
+                    <p>Your one-stop destination for free programming resources and development tools.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5><i class="fas fa-link"></i> Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://rskworld.in" style="color: #9ca3af; text-decoration: none;">Website</a></li>
+                        <li><a href="https://rskworld.in/project" style="color: #9ca3af; text-decoration: none;">More Projects</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5><i class="fas fa-envelope"></i> Contact</h5>
+                    <p>
+                        <i class="fas fa-envelope"></i> help@rskworld.in<br>
+                        <i class="fas fa-phone"></i> +91 93305 39277
+                    </p>
+                </div>
+            </div>
+            <hr class="my-4" style="border-color: #4b5563;">
+            <div class="text-center">
+                <p class="mb-0">© 2026 RSK World. All rights reserved.</p>
+                <p class="mb-0 small text-muted">Founded by Molla Samser | Designer & Tester: Rima Khatun</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
